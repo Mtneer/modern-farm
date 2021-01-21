@@ -5,6 +5,7 @@ import { createAsparagus } from './seeds/asparagus.js'
 import { addPlant , usePlants } from './field.js'
 import { plantSeeds } from './tractor.js'
 import { createCorn } from './seeds/corn.js'
+import { harvestPlants } from './harvester.js'
 
 const yearlyPlan = createPlan();
 console.log(yearlyPlan)
@@ -17,3 +18,6 @@ console.log(yearlyPlan)
 
 plantSeeds(yearlyPlan);
 console.log(usePlants())
+
+let harvest = harvestPlants(usePlants()); 
+console.log(harvest)
